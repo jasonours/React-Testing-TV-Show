@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import Episodes from './Episodes';
 
-const mockEpisodes = [
+export const mockEpisodes = [
     {
         id: 553946,
         url: "http://www.tvmaze.com/episodes/553946/stranger-things-1x01-chapter-one-the-vanishing-of-will-byers",
@@ -43,4 +43,3 @@ test ("renders list of Episodes with mock data", () => {
     rerender (<Episodes error="" episodes={mockEpisodes} />);
     expect (queryAllByTestId('episode-id')).toHaveLength(2);
 })
-
